@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>EMPLOYEE PORTAL</h1>
+    <div class="container">
+        <div class="cont-items">
+            
+            <div class="details" >
+                <label for="emp_id">Employee ID</label>
+                <input type="text" id="id" required/>
+                <p id="error-id"></p>
+            </div>
+            <div class="details">
+                <label for="emp_name">Name</label>
+                <input type="text" id="name" required/>
+                <p id="error-name"></p>
+            </div>
+            <div class="details">
+                <label for="emp_age">Age</label>
+                <input type="text" id="age" required/>
+                <p id="error-age"></p>
+            </div>
+            <div class="details" >
+                <label for="emp_gender">Gender</label>
+                <select name="Gender" id="gender-val" required>
+               
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <p id="error-gender"></p>
+            </div>
+        
+        </div>
+        <button class="submit-btn" type="submit" onclick="submitdata()">ADD</button>
+        
+    </div>
+
+    <div class="popup-overlay" id="edit">
+        <div class="popup-content">
+            <div class="details" >
+                <label for="emp_id">Employee ID</label>
+                <input type="text" id="emp_id"  >
+                <p id="edit_id" style="color: red;"></p>
+            </div>
+            <div class="details" >
+                <label for="emp_name">Name</label>
+                <input type="text" id="emp_name" >
+                <p id="edit_name" style="color: red;"></p>
+            </div>
+            <div class="details">
+                <label for="emp_age">Age</label>
+                <input type="text" id="emp_age" >
+                <p id="edit_age" style="color: red;"></p>
+            </div>
+            <div class="details">
+                <label for="emp_gender">Gender</label>
+                <select name="Gender" id="emp_gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <p id="edit_gender" style="color: red;"></p>
+            </div>
+            <button type="submit" id="update-id" onClick="add_button()">Update</button>
+            <button type="submit" id="cancel-id" onClick="cancel_div()">cancel</button>
+        </div>    
+
+    </div>
+    
+
+
+    <div class="table">
+        <table class="info">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody id="display">
+                
+            </tbody>
+        </table>
+    </div>
+
+    </body>
+</html>
